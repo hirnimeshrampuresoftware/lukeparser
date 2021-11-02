@@ -13,7 +13,8 @@ cd $BISON
 make
 make install
 bison --version
-#yum install -y sudo
-#sudo yum install epel-release
-#sudo yum install -y python-pip
+python --version
 /opt/python/cp36-cp36m/bin/python -m pip install cython
+/opt/python/cp37-cp37m/bin/python -m pip install cython
+/opt/python/cp38-cp38/bin/python -m pip install cython
+/opt/python/cp39-cp39/bin/python -m pip install cython
