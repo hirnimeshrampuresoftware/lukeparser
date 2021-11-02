@@ -13,4 +13,6 @@ cd $BISON
 make
 make install
 bison --version
+yum install epel-release
+yum install python-pip
 pip3 install cython
