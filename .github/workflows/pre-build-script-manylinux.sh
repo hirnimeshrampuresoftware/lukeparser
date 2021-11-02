@@ -14,5 +14,5 @@ make
 make install
 bison --version
 yum install epel-release
-yum install python-pip
+yum install -y python-pip
 pip3 install cython
