@@ -13,3 +13,4 @@ cd $BISON
 make
 make install
 bison --version
+pip3 install cython
