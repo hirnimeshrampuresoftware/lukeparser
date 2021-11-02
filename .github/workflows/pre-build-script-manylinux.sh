@@ -16,4 +16,4 @@ bison --version
 #yum install -y sudo
 #sudo yum install epel-release
 #sudo yum install -y python-pip
-/opt/python/${{ matrix.python-versions }}/bin/python -m pip install cython
+/opt/python/cp36-cp36m/bin/python -m pip install cython
