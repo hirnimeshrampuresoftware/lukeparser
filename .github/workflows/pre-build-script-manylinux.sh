@@ -13,7 +13,7 @@ cd $BISON
 make
 make install
 bison --version
-yum install -y sudo
-sudo yum install epel-release
-sudo yum install -y python-pip
-sudo pip install cython
+#yum install -y sudo
+#sudo yum install epel-release
+#sudo yum install -y python-pip
+/opt/python/${{ matrix.python-versions }}/bin/python -m pip install cython
