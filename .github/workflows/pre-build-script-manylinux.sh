@@ -14,7 +14,7 @@ make
 make install
 bison --version
 if [ `uname -m` == "aarch64" ]; then
-   for ver in cp3*; do
-      /opt/python/$ver/bin/python -m pip install cython
+   for python in /opt/python/cp3*/bin/python; do
+      $python -m pip install cython
    done
 fi
