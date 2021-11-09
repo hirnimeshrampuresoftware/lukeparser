@@ -86,6 +86,9 @@ jobs:
         platform:
           - manylinux2010_x86_64
           - manylinux2014_aarch64
+    env:
+      arch: ${{ matrix.platform }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -94,7 +97,7 @@ jobs:
         uses: docker/setup-qemu-action@v1        
       - name: Build wheel for manylinux2010_x86_64
         if: matrix.platform == 'manylinux2010_x86_64'
-        uses: RalfG/python-wheels-manylinux-build@v0.3.3-manylinux2014_$(uname -m)
+        uses: RalfG/python-wheels-manylinux-build@v0.3.3-${{ env.arch }}
         with:
           python-versions: 'cp36-cp36m cp37-cp37m cp38-cp38 cp39-cp39'
           build-requirements: 'pybison>=0.2.8 six>=1.10.0 watchdog tqdm tornado livereload'
